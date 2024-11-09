@@ -1,5 +1,6 @@
 using Blazor_Authentication.Components;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blazor_Authentication;
 
@@ -22,7 +23,7 @@ public class Program
             });
         builder.Services.AddAuthorization();
         builder.Services.AddCascadingAuthenticationState();
-        builder.Services.AddDbContext<AppContext>(options =>
+        builder.Services.AddDbContext<DbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
 
         var app = builder.Build();
