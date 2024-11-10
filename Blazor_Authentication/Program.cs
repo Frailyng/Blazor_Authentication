@@ -3,12 +3,6 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Blazor_Authentication.DAL;
 
-namespace Blazor_Authentication;
-
-public class Program
-{
-    public static void Main(string[] args)
-    {
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
@@ -24,9 +18,10 @@ public class Program
             });
         builder.Services.AddAuthorization();
         builder.Services.AddCascadingAuthenticationState();
-        builder.Services.AddDbContext<AppDbContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
 
+        var ConStr = builder.Configuration.GetConnectionString("SqlConStr");
+        builder.Services.AddDbContextFactory<AppDbContext>(o => o.UseSqlServer(ConStr));
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -48,5 +43,3 @@ public class Program
             .AddInteractiveServerRenderMode();
 
         app.Run();
-    }
-}
