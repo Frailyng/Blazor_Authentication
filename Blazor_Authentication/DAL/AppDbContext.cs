@@ -11,4 +11,14 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<CuentaUsuario> CuentaUsuario { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<CuentaUsuario>().HasData(new List<CuentaUsuario>()
+        {
+            new CuentaUsuario () { Id = 1, NombreUsuario = "Frailyn", Contraseña = "1234", Rol = "Administrator" },
+            new CuentaUsuario () { Id = 2, NombreUsuario = "Juan", Contraseña = "User02", Rol = "User" }
+        });
+    }
 }
