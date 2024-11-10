@@ -10,7 +10,7 @@
 
 <div class="row">
     <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
-        <EditForm Model="@Model" OnInvalidSubmit="Authenticate" FormName="LoginForm">
+        <EditForm Model="@Model" OnValidSubmit="Authenticate" FormName="LoginForm">
             <DataAnnotationsValidator />
             <div class="mb-3 text-center flex-column">
                 <img src="/Usuario.png" style="max-height:5rem;" />
@@ -30,7 +30,7 @@
                 <span class="text-danger">@errorMessage</span>
             </div>
             <div class="mb-3 d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button class="btn btn-primary" type="submit">Login</button>
             </div>
         </EditForm>
 

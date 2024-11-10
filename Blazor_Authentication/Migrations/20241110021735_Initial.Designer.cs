@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blazor_Authentication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241110014612_Inicial")]
-    partial class Inicial
+    [Migration("20241110021735_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,8 +56,8 @@ namespace Blazor_Authentication.Migrations
                         new
                         {
                             Id = 2,
-                            Contraseña = "User02",
-                            NombreUsuario = "Juan",
+                            Contraseña = "1212",
+                            NombreUsuario = "Abel",
                             Rol = "User"
                         });
                 });

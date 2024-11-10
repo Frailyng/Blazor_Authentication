@@ -7,7 +7,7 @@
 namespace Blazor_Authentication.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +33,7 @@ namespace Blazor_Authentication.Migrations
                 values: new object[,]
                 {
                     { 1, "1234", "Frailyn", "Administrator" },
-                    { 2, "User02", "Juan", "User" }
+                    { 2, "1212", "Abel", "User" }
                 });
         }
 

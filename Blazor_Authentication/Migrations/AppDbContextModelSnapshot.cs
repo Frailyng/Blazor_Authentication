@@ -53,8 +53,8 @@ namespace Blazor_Authentication.Migrations
                         new
                         {
                             Id = 2,
-                            Contraseña = "User02",
-                            NombreUsuario = "Juan",
+                            Contraseña = "1212",
+                            NombreUsuario = "Abel",
                             Rol = "User"
                         });
                 });

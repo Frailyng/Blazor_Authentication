@@ -18,7 +18,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<CuentaUsuario>().HasData(new List<CuentaUsuario>()
         {
             new CuentaUsuario () { Id = 1, NombreUsuario = "Frailyn", Contraseña = "1234", Rol = "Administrator" },
-            new CuentaUsuario () { Id = 2, NombreUsuario = "Juan", Contraseña = "User02", Rol = "User" }
+            new CuentaUsuario () { Id = 2, NombreUsuario = "Abel", Contraseña = "1212", Rol = "User" }
         });
     }
 }
