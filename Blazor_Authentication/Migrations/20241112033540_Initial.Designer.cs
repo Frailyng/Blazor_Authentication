@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Blazor_Authentication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241110021735_Initial")]
+    [Migration("20241112033540_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
